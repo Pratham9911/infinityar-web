@@ -254,7 +254,7 @@ const messages = [
 
   {/* 🌌 Canvas */}
 
-<div className="absolute inset-0 w-full h-full pointer-events-none md:pointer-events-auto">
+<div className="absolute inset-0 w-full h-full z-10 pointer-events-none md:pointer-events-auto">
   <Canvas camera={{ position: [0, 0, 8] }} dpr={[1, 1.5]}>
     <ambientLight intensity={1.2} />
     <directionalLight position={[2, 2, 5]} intensity={1.5} />
@@ -264,6 +264,7 @@ const messages = [
     <OrbitControls enableZoom={false} enablePan={false} />
   </Canvas>
 </div>
+
 
 
 

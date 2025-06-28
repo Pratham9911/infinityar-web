@@ -8,7 +8,8 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="flex items-center justify-between border-b border-[#293542] px-6 py-4 z-50 relative">
+   <header className="flex items-center justify-between border-b border-[#293542] px-6 py-4 z-[100] relative">
+
       {/* 🌌 Logo + Title */}
       <div className="flex items-center gap-4 text-white">
         <div className="w-5 h-5">
@@ -65,7 +66,7 @@ export default function Navbar() {
 
       {/* 📱 Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-black border-t border-[#293542] md:hidden flex flex-col gap-4 px-6 py-6 z-40">
+       <div className="absolute top-full left-0 w-full bg-black border-t border-[#293542] md:hidden flex flex-col gap-4 px-6 py-6 z-[200]">
           <a className="text-white text-base font-medium" href="#">Features</a>
           <a className="text-white text-base font-medium" href="#">Pricing</a>
           <a className="text-white text-base font-medium" href="#">Support</a>
