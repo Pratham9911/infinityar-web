@@ -223,23 +223,16 @@ const messages = [
   ];
 
   return (
-<div className="relative w-full min-h-screen z-10 overflow-x-hidden touch-auto">
-
-
-  {/* 💬 Floating title & CTA */}
-  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center sm:justify-start pointer-events-none z-30">
+<div className="relative w-full min-h-screen overflow-x-hidden touch-auto">
+  {/* 🌌 Hero Text & Button */}
+  <div className="relative z-30 w-full min-h-screen flex items-center justify-center sm:justify-start pointer-events-none">
     <div className="text-center sm:text-left max-w-[700px] pointer-events-auto px-6 sm:ml-[4%]">
-      {/* Title */}
       <h1 className="text-[48px] sm:text-[64px] md:text-[100px] lg:text-[120px] leading-tight font-extrabold font-grotesk text-white tracking-wide">
         InfinityAR
       </h1>
-
-      {/* Subtitle */}
       <p className="mt-2 text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-semibold font-grotesk text-gray-300 tracking-widest">
         Lost in Space
       </p>
-
-      {/* Button */}
       <button className="mt-6 sm:mt-8 px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg md:text-xl font-bold font-grotesk rounded-3xl 
         bg-gradient-to-br from-blue-400 to-blue-600 text-white
         shadow-lg shadow-blue-500/50 hover:from-blue-500 hover:to-blue-700
@@ -249,29 +242,21 @@ const messages = [
         Explore Now
       </button>
     </div>
-    
   </div>
 
-  {/* 🌌 Canvas */}
-
-<div className="absolute inset-0 w-full h-full z-10 pointer-events-none md:pointer-events-auto">
-  <Canvas camera={{ position: [0, 0, 8] }} dpr={[1, 1.5]}>
-    <ambientLight intensity={1.2} />
-    <directionalLight position={[2, 2, 5]} intensity={1.5} />
-    <Suspense fallback={null}>
-      <Astronaut messages={messages} greetings={greetings} />
-    </Suspense>
-    <OrbitControls enableZoom={false} enablePan={false} />
-  </Canvas>
+  {/* 🌌 3D Canvas (Background Layer) */}
+  <div className="absolute inset-0 w-full h-full z-0">
+    <Canvas camera={{ position: [0, 0, 8] }} dpr={[1, 1.5]}>
+      <ambientLight intensity={1.2} />
+      <directionalLight position={[2, 2, 5]} intensity={1.5} />
+      <Suspense fallback={null}>
+        <Astronaut messages={messages} greetings={greetings} />
+      </Suspense>
+      <OrbitControls enableZoom={false} enablePan={false} />
+    </Canvas>
+  </div>
 </div>
 
-
-
-
-
- 
-
-</div>
 
 
 

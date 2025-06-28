@@ -8,7 +8,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-   <header className="flex items-center justify-between border-b border-[#293542] px-6 py-4 z-[100] relative">
+   <header className="flex items-center justify-between border-b border-[#293542] px-6 py-4 z-[100] relative bg-transparent">
 
       {/* 🌌 Logo + Title */}
       <div className="flex items-center gap-4 text-white">
@@ -38,23 +38,22 @@ export default function Navbar() {
         </h2>
       </div>
 
-      {/* 🧭 Desktop Navigation */}
-      <div className="hidden md:flex flex-1 justify-end gap-8">
-        <div className="flex items-center gap-9">
-          <a className="text-white text-sm font-medium" href="/features">Features</a>
-          <a className="text-white text-sm font-medium" href="#">Pricing</a>
-          <a className="text-white text-sm font-medium" href="#">Support</a>
-        </div>
-        <button className="flex h-10 px-4 items-center justify-center rounded-xl bg-[#d2e2f3] text-[#14191f] text-sm font-bold tracking-wide hover:bg-white/90 transition-all cursor-[url('/cursor2.png'),_pointer]">
-        <a
-  href="https://github.com/Pratham9911/InfinityAR/releases/download/InfinityAR/infinityAR.apk"
-  download
->
-  <span className="truncate">Download App</span>
-</a>
+    {/* 🧭 Desktop Navigation */}
+<div className="hidden md:flex flex-1 justify-end gap-8 z-[100]">
+  <div className="flex items-center gap-9">
+    <a className="text-white text-sm font-medium" href="/features">Features</a>
+    <a className="text-white text-sm font-medium" href="#">Pricing</a>
+    <a className="text-white text-sm font-medium" href="#">Support</a>
+  </div>
+  <a
+    href="https://github.com/Pratham9911/InfinityAR/releases/download/InfinityAR/infinityAR.apk"
+    download
+    className="flex h-10 px-4 items-center justify-center rounded-xl bg-[#d2e2f3] text-[#14191f] text-sm font-bold tracking-wide hover:bg-white/90 transition-all cursor-[url('/cursor2.png'),_pointer]"
+  >
+    <span className="truncate">Download App</span>
+  </a>
+</div>
 
-        </button>
-      </div>
 
       {/* 📱 Mobile Hamburger */}
       <button
@@ -65,16 +64,22 @@ export default function Navbar() {
       </button>
 
       {/* 📱 Mobile Dropdown Menu */}
-      {isOpen && (
-       <div className="absolute top-full left-0 w-full bg-black border-t border-[#293542] md:hidden flex flex-col gap-4 px-6 py-6 z-[200]">
-          <a className="text-white text-base font-medium" href="#">Features</a>
-          <a className="text-white text-base font-medium" href="#">Pricing</a>
-          <a className="text-white text-base font-medium" href="#">Support</a>
-          <button className="mt-4 h-10 px-4 rounded-xl bg-[#d2e2f3] text-[#14191f] text-sm font-bold tracking-wide hover:bg-white/90 transition-all cursor-[url('/cursor2.png'),_pointer]">
-            Download App
-          </button>
-        </div>
-      )}
+     {isOpen && (
+  <div className="absolute top-full left-0 w-full bg-black border-t border-[#293542] md:hidden flex flex-col gap-4 px-6 py-6 z-[200]">
+    <a className="text-white text-base font-medium" href="/features">Features</a>
+    <a className="text-white text-base font-medium" href="#">Pricing</a>
+    <a className="text-white text-base font-medium" href="#">Support</a>
+
+    <a
+      href="https://github.com/Pratham9911/InfinityAR/releases/download/InfinityAR/infinityAR.apk"
+      download
+      className="mt-4 h-10 px-4 flex items-center justify-center rounded-xl bg-[#d2e2f3] text-[#14191f] text-sm font-bold tracking-wide hover:bg-white/90 transition-all cursor-[url('/cursor2.png'),_pointer]"
+    >
+      Download App
+    </a>
+  </div>
+)}
+
     </header>
   );
 }
