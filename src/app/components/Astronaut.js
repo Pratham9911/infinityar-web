@@ -223,7 +223,9 @@ const messages = [
   ];
 
   return (
-<div className="relative w-full h-screen z-10">
+<div className="relative w-full min-h-screen z-10 overflow-x-hidden touch-auto">
+
+
   {/* 💬 Floating title & CTA */}
   <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center sm:justify-start pointer-events-none z-30">
     <div className="text-center sm:text-left max-w-[700px] pointer-events-auto px-6 sm:ml-[4%]">
@@ -251,6 +253,7 @@ const messages = [
   </div>
 
   {/* 🌌 Canvas */}
+  <div className="absolute inset-0 w-full h-full pointer-events-none sm:pointer-events-none md:pointer-events-auto">
   <Canvas camera={{ position: [0, 0, 8] }} dpr={[1, 1.5]}>
     <ambientLight intensity={1.2} />
     <directionalLight position={[2, 2, 5]} intensity={1.5} />
@@ -259,6 +262,8 @@ const messages = [
     </Suspense>
     <OrbitControls enableZoom={false} enablePan={false} />
   </Canvas>
+</div>
+
 
 
  
