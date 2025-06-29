@@ -239,7 +239,10 @@ const messages = [
         hover:scale-105 active:scale-95 transition-all duration-300
         focus:outline-none focus:ring-4 focus:ring-blue-300 
         cursor-[url('/cursor2.png'),_pointer]">
-        Explore Now
+          <a href="/guide">
+           Explore Now
+          </a>
+       
       </button>
     </div>
   </div>

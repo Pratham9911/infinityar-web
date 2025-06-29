@@ -72,7 +72,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <p className="text-[#92abc9] text-base font-normal leading-normal">
-        © {new Date().getFullYear()} InfinityAR. All rights reserved.
+        © {new Date().getFullYear()} Pratham Tiwari. All rights reserved.
       </p>
     </footer>
   );

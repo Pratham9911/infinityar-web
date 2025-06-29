@@ -10,7 +10,7 @@ export default function Version() {
       ([entry]) => {
         if (entry.isIntersecting) setVisible(true);
       },
-      { threshold: 0.4 }
+      { threshold: 0.9 }
     );
 
     if (versionRef.current) observer.observe(versionRef.current);

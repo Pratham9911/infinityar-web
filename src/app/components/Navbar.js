@@ -41,9 +41,9 @@ export default function Navbar() {
     {/* 🧭 Desktop Navigation */}
 <div className="hidden md:flex flex-1 justify-end gap-8 z-[100]">
   <div className="flex items-center gap-9">
+        <a className="text-white text-base font-medium" href="/">Home</a>
     <a className="text-white text-sm font-medium" href="/features">Features</a>
-    <a className="text-white text-sm font-medium" href="#">Pricing</a>
-    <a className="text-white text-sm font-medium" href="#">Support</a>
+    <a className="text-white text-sm font-medium" href="/support">Support</a>
   </div>
   <a
     href="https://github.com/Pratham9911/InfinityAR/releases/download/InfinityAR/infinityAR.apk"
@@ -66,9 +66,9 @@ export default function Navbar() {
       {/* 📱 Mobile Dropdown Menu */}
      {isOpen && (
   <div className="absolute top-full left-0 w-full bg-black border-t border-[#293542] md:hidden flex flex-col gap-4 px-6 py-6 z-[200]">
+    <a className="text-white text-base font-medium" href="/">Home</a>
     <a className="text-white text-base font-medium" href="/features">Features</a>
-    <a className="text-white text-base font-medium" href="#">Pricing</a>
-    <a className="text-white text-base font-medium" href="#">Support</a>
+    <a className="text-white text-base font-medium" href="/support">Support</a>
 
     <a
       href="https://github.com/Pratham9911/InfinityAR/releases/download/InfinityAR/infinityAR.apk"
