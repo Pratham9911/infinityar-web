@@ -7,7 +7,7 @@ export default function SupportSection() {
         <div className="flex flex-col gap-3 p-4 max-w-[960px] mx-auto">
           <div className="flex min-w-72 flex-col gap-3">
             <p className="tracking-light text-[32px] font-bold leading-tight">
-              Need Help? We're Here for You!
+              Need Help? We&apos;re here to help!
             </p>
             <p className="text-[#90aacb] text-sm font-normal">
               We're committed to providing you with the best possible experience. If you have any questions, encounter any issues, or simply want to share your thoughts, please
