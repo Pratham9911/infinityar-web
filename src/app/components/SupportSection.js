@@ -6,13 +6,15 @@ export default function SupportSection() {
       <div className="layout-container flex flex-col px-10 py-5">
         <div className="flex flex-col gap-3 p-4 max-w-[960px] mx-auto">
           <div className="flex min-w-72 flex-col gap-3">
-            <p className="tracking-light text-[32px] font-bold leading-tight">
-              Need Help? We&apos;re here to help!
-            </p>
-            <p className="text-[#90aacb] text-sm font-normal">
-              We're committed to providing you with the best possible experience. If you have any questions, encounter any issues, or simply want to share your thoughts, please
-              don't hesitate to reach out. Your feedback is invaluable to us as we continue to improve InfinityAR.
-            </p>
+           <p className="tracking-light text-[32px] font-bold leading-tight">
+  Need Help? We&apos;re here to help!
+</p>
+
+<p className="text-[#90aacb] text-sm font-normal">
+  We&apos;re committed to providing you with the best possible experience. If you have any questions, encounter any issues, or simply want to share your thoughts, please
+  don&apos;t hesitate to reach out. Your feedback is invaluable to us as we continue to improve InfinityAR.
+</p>
+
           </div>
 
           <h2 className="text-[22px] font-bold tracking-[-0.015em] pt-5 px-4">Contact Us</h2>
