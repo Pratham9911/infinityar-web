@@ -14,9 +14,34 @@ export default function GuideSection() {
           InfinityAR is currently under development, and some features may be limited. We appreciate your understanding as we continue to improve the app.
         </p>
 
+        {/* Tutorial Video */}
+        <div className="mb-10">
+        <video
+  autoPlay
+  muted
+  playsInline
+  controls
+  loop
+  preload="metadata"
+  className="w-full max-w-3xl mx-auto rounded-lg border border-[#3d4b5c]"
+  
+>
+  <source src="/demo.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+        </div>
+
         <h3 className="text-[22px] font-bold pb-3 pt-5">Step-by-Step Guide</h3>
         <div className="grid grid-cols-[40px_1fr] gap-x-2 text-left">
-          {["Download the App", "Download the Image Target", "Launch the App and Tap 'Start'", "Choose a Mode: EXPLORE or ROCKET", "Point the Camera at the Image Target", "Interact with the 3D Models"].map((step, index) => (
+          {[
+            "Download the App",
+            "Download the Image Target",
+            "Launch the App and Tap 'Start'",
+            "Choose a Mode: EXPLORE or ROCKET",
+            "Point the Camera at the Image Target",
+            "Interact with the 3D Models",
+          ].map((step, index) => (
             <React.Fragment key={index}>
               <div className="flex flex-col items-center gap-1 pt-3">
                 <div className="w-6 h-6 bg-white rounded-full" />
@@ -31,15 +56,17 @@ export default function GuideSection() {
 
         <h3 className="text-[22px] font-bold pt-10 pb-4">Bonus Features</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
-          {["Join the Community", "Participate in Quizzes", "Access Announcements"].map((feature, index) => (
-            <div
-              key={index}
-              className="rounded-lg border border-[#3d4b5c] bg-[#1f252e] p-5 flex gap-3 items-center"
-            >
-              <div className="w-6 h-6 bg-white rounded-full" />
-              <h4 className="text-base font-bold leading-tight">{feature}</h4>
-            </div>
-          ))}
+          {["Join the Community", "Participate in Quizzes", "Access Announcements"].map(
+            (feature, index) => (
+              <div
+                key={index}
+                className="rounded-lg border border-[#3d4b5c] bg-[#1f252e] p-5 flex gap-3 items-center"
+              >
+                <div className="w-6 h-6 bg-white rounded-full" />
+                <h4 className="text-base font-bold leading-tight">{feature}</h4>
+              </div>
+            )
+          )}
         </div>
       </div>
     </section>
